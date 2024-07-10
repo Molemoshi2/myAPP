@@ -1,0 +1,55 @@
+
+/*.main-mom{
+    display: flex;
+}
+
+
+.main-mom .card{
+    border: 2px solid rgb(180, 180, 180);
+    width: 200px;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgb(85, 84, 84);
+    
+}*/
+.parent{
+    display: flex;
+    gap: 5rem;
+    margin-top: 7rem;
+}
+.Container{
+    border: 2px solid rgb(163, 157, 157);
+    text-align: center;
+    padding: 3rem;
+    width: 30%;
+    box-shadow: 3px 3px 3px rgb(97, 96, 96);
+}
+input{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 2rem;
+}
+
+#identity{
+    margin-bottom: 2rem;
+}
+
+/* cards div*/
+.child{
+    padding: 3rem; 
+    width: 70%; 
+    border: 3px solid rgb(177, 174, 174);
+    box-shadow: 3px 3px 3px rgb(97, 96, 96);
+    text-align: center;
+}
+
+.first-child{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+.child .containerCard{
+    border: 2px solid rgb(199, 194, 194);
+    width: 14rem;
+
+}
