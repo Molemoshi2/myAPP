@@ -53,3 +53,8 @@ input{
     width: 14rem;
 
 }
+
+.modal
+{
+    display: none;
+}

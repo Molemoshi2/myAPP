@@ -21,7 +21,7 @@ function App(){
               <div className='child'>
               <h1>New records</h1>
                 <div className='first-child'>
-                  <EmployeeCard setNewRecords={setNewRecords} newRecords={newRecords}/>
+                  <EmployeeCard setNewRecords={setNewRecords} newRecords={newRecords} />
                 </div>
 
           </div>
