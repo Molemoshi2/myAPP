@@ -8,11 +8,13 @@ function EmployeeCard(props){
   const [open,setOpen] = useState(false)
   
 
+const edit=(employee,index) =>{
+    props.edit(employee,index)
+
+} 
 function handleOpen(){
     setOpen(true)
 }
-
-
 
 
   //adding the delete function
@@ -30,6 +32,8 @@ const handleEdit = (index) =>{
         
     }
 
+ 
+
     return(
         <div className="first-child">
 
@@ -45,7 +49,7 @@ const handleEdit = (index) =>{
                     <button onClick={()=>handleEdit(index)}>Edit</button>
                     
                     <div id="myModal" className="modal">
-                    <EditModal data={record} />
+                    <EditModal data={record} edit={edit} index={index} />
                     </div>
                      
                 </div>
