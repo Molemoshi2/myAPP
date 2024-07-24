@@ -38,10 +38,12 @@ function EditModal(props){
 //    const update = ()=>{
 //       props.updatefunction(,index)
 //    }
+
    const edit=() =>{
     props.edit({name:updatedName,email:updatedEmail,number:updatedNumber,image:updatedImage,position:updatedPosition},index)
     // console.log('here3',employee)
-
+    const modal = document.getElementById('myModal');
+    modal.style.display='none'
 } 
  
 

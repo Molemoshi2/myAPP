@@ -5,16 +5,14 @@ import { useState } from "react";
 import EditModal from "./EditModal";
 
 function EmployeeCard(props){
-  const [open,setOpen] = useState(false)
+  const [isopen,setisOpen] = useState(false)
   
 
 const edit=(employee,index) =>{
     props.edit(employee,index)
 
 } 
-function handleOpen(){
-    setOpen(true)
-}
+
 
 
   //adding the delete function
@@ -25,10 +23,11 @@ function handleOpen(){
 const handleEdit = (index) =>{
     const modal = document.getElementById("myModal")
     const editRec = props.newRecords[index]
-    handleOpen();
-    modal.style.display="block"
-    console.log(modal)
-    console.log(editRec)
+    if(!isopen){
+        modal.style.display="block"
+        console.log(modal)
+        console.log(editRec)
+    }
         
     }
 

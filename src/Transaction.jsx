@@ -7,18 +7,31 @@ function Transactions(props){
         const [cell,setCell] = useState(0)
         const [position,setPosition] = useState('')
         const [image,setImage] = useState('')
+        const [searchedItem,setSearchedItem] = useState('')
 
         //what happens when you click the add button
         const handleonClick = ()=>{
             props.handleonClicks(name,email,cell,position,image)
         }
 
-       
+        //search btn
+        function handlesearchbtn(){
+            const searchArray = props.records[index].name.filter(item =>item.includes(searchedItem.toLocaleLowerCase()))
+            props.setRecord(searchArray)
+        }
+
+       // search function
+       function handleSearch(event){
+        //console.log(searchedItem)
+        setSearchedItem(event.target.value)
+        
+        //console.log(searchArray)
+       }
       
         //accesing input with name
         function handleChangeName(event){
             setName(event.target.value)
-
+            
         }
 
         //accessing value at email
@@ -63,7 +76,8 @@ function Transactions(props){
                             <option value="Manager">Manager</option>
                         </select>
                         <button onClick={handleonClick}>Add Record</button><br />
-                        <input className="search" type="search" name="" id="" placeholder="Seach employee records" />
+                        <input className="search" type="search" name="" id="" placeholder="Seach employee records" onChange={handleSearch} />
+                        <button onClick={()=>handlesearchbtn}>search</button>
                    </div>
                 </>
                 
@@ -72,4 +86,6 @@ function Transactions(props){
         );
 
 }
+
+
 export default Transactions

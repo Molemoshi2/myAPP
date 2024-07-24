@@ -30,7 +30,7 @@ function App(){
     <>
       <div className='parent' >  
 
-          <Transaction handleonClicks={addtolist}/>
+          <Transaction handleonClicks={addtolist} Records={newRecords} setRecord={setNewRecords}/>
               <div className='child'>
               <h1>New records</h1>
                 <div className='first-child'>
